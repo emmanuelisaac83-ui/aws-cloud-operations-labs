@@ -1,0 +1,17 @@
+
+import json
+
+def lambda_handler(event, context):
+    response = {
+        "message": "Hello from my AWS Lambda web app!",
+        "project": "Cloud Operations Lab",
+        "status": "success"
+    }
+
+    return {
+        "statusCode": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": json.dumps(response)
+    }
